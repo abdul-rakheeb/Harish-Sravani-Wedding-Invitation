@@ -46,7 +46,7 @@ button{
     color:#FFD700;
     cursor:pointer;
     font-family:'Cinzel',serif;
-    transition:.4s;
+    transition:all .4s ease;
     }
 button:hover{
     background:#FFD700;
@@ -104,6 +104,7 @@ nav{
     border-radius:50px;
     z-index:1000;
     transition:.4s;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
     }
 .logo{
     font-family:'Great Vibes',cursive;
@@ -523,6 +524,7 @@ background:#d4af37;
     }
 .nav-links.active{
         display:flex;
+    }
     .logo{
         font-size:28px;
     }
@@ -626,3 +628,6 @@ button{
     cursor:pointer;
     font-weight:bold;
     }
+
+
+    
