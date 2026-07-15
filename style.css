@@ -53,6 +53,11 @@ button:hover{
     color:black;
     transform:translateY(-5px);
     }
+    button:active{
+    background:#FFD700;
+    color:black;
+    transform:scale(0.98);
+}
 .overlay{
     width:100%;
     height:100%;
