@@ -64,15 +64,14 @@ button:hover{
     box-sizing:border-box;
     }
 .invitation {
-    min-height: 100vh;
     background: #fdf6ec;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 100px 20px;
     text-align: center;
-    }
+}
 .invitation h2 {
     font-family: 'Cinzel', serif;
     font-size: 48px;
@@ -155,10 +154,9 @@ nav ul li a:hover::after{
     cursor:pointer;
     }
 .couple{
-    min-height:100vh;
     background:#fff8f0;
     text-align:center;
-    padding:80px 20px;
+    padding:100px 20px;
 }
 .couple h2{
     font-family:'Cinzel',serif;
@@ -198,12 +196,12 @@ nav ul li a:hover::after{
     font-size:70px;
     }
 .save-date{
-    min-height:100vh;
     background:#f8f3eb;
     display:flex;
     justify-content:center;
     align-items:center;
-    }
+    padding:100px 20px;
+}
 .date-card{
     width:450px;
     background:white;
@@ -235,12 +233,12 @@ nav ul li a:hover::after{
     color:#555;
     }
 .countdown{
-    min-height:100vh;
     background:#fffaf3;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    padding:100px 20px;
 }
 .countdown h2{
     font-family:'Cinzel',serif;
@@ -289,14 +287,13 @@ nav ul li a:hover::after{
     }
     }
 .events{
-    min-height:100vh;
     background:#fdf8f2;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    padding:80px 20px;
-    }
+    padding:100px 20px;
+}
 .events h2{
     font-family:'Cinzel',serif;
     font-size:48px;
@@ -326,11 +323,10 @@ nav ul li a:hover::after{
     margin-bottom:15px;
     }
 .gallery{
-    min-height:100vh;
     background:#fffaf5;
-    padding:80px 40px;
+    padding:100px 20px;
     text-align:center;
-    }
+}
 .gallery h2{
     font-family:'Cinzel',serif;
     font-size:48px;
@@ -357,14 +353,13 @@ nav ul li a:hover::after{
     transform:scale(1.05);
     }
 .venue{
-    min-height:100vh;
     background:#f8f3eb;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    padding:80px 20px;
-    }
+    padding:100px 20px;
+}
 .venue h2{
     font-family:'Cinzel',serif;
     font-size:48px;
@@ -507,6 +502,7 @@ background:#d4af37;
     margin-top:90px;
     text-align:center;
 }
+
 @media (max-width:768px){
     .menu-toggle{
         display:block;
@@ -561,14 +557,23 @@ button{
         text-align:center;
     }
 .countdown-container{
-        grid-template-columns:1fr;
-        width:90%;
-        max-width:300px;
-        gap:20px;
-    }
+    grid-template-columns:repeat(2,1fr);
+    width:90%;
+    max-width:420px;
+    gap:15px;
+}
+
 .box{
-        width:100%;
-    }
+    width:100%;
+    padding:20px 10px;
+}
+.box span{
+    font-size:42px;
+}
+
+.box p{
+    font-size:18px;
+}
 .gallery{
         padding:60px 20px;
     }
@@ -597,6 +602,20 @@ button{
         bottom:15px;
         right:15px;
     }
+    /* Mobile Heading Sizes */
+
+.invitation h2,
+.save-date h2,
+.countdown h2,
+.couple h2,
+.events h2,
+.gallery h2,
+.venue h2{
+    font-size:34px;
+    line-height:1.3;
+    margin-bottom:25px;
+    text-align:center;
+}
 }
 /* ===========================
    Gallery Lightbox
