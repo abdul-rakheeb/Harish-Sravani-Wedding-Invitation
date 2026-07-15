@@ -26,7 +26,9 @@ enterButton.addEventListener("click", function () {
 
     // Give immediate feedback
     enterButton.innerHTML = "Opening...";
-
+    enterButton.style.background = "#FFD700";
+    enterButton.style.color = "#000";
+    enterButton.style.borderColor = "#FFD700";
     // Start fade-out
     welcome.style.opacity = "0";
 
