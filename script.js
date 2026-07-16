@@ -241,7 +241,7 @@ if (canvas) {
     function scratch(x, y) {
         ctx.globalCompositeOperation = "destination-out";
         ctx.beginPath();
-        ctx.arc(x, y, 35, 0, Math.PI * 2);
+        ctx.arc(x, y, 55, 0, Math.PI * 2);
         ctx.fill();
     }
 
