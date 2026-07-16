@@ -175,4 +175,32 @@ function createFlower() {
 
 }
 
-setInterval(createFlower, 500);
+setInterval(createFlower, 800);
+// ===========================
+// Floating Hearts
+// ===========================
+
+const heartContainer = document.getElementById("heart-container");
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("floating-heart");
+
+    heart.innerHTML = "❤";
+
+    heart.style.left = Math.random() * 100 + "%";
+
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+
+    heart.style.animationDuration = (6 + Math.random() * 4) + "s";
+
+    heartContainer.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+
+}
+setInterval(createHeart, 1200);
