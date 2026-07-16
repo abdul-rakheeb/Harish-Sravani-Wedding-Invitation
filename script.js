@@ -51,7 +51,14 @@ if(menuToggle){
     menuToggle.addEventListener("click",function(){
         navLinks.classList.toggle("active");
     });
+    const navItems = document.querySelectorAll(".nav-links a");
+    navItems.forEach(item => {
+    item.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
 }
+
 const musicButton = document.getElementById("music-btn");
 musicButton.addEventListener("click", function(){
 

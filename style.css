@@ -659,7 +659,20 @@ button{
 .scratch-content p{
     font-size:16px;
 }
+.rsvp h2{
+    font-size:34px;
+}
 
+.rsvp p{
+    font-size:18px;
+}
+
+.rsvp-btn{
+    width:90%;
+    max-width:280px;
+    padding:15px;
+    font-size:18px;
+}
 
     /* Mobile Heading Sizes */
 
@@ -847,4 +860,47 @@ button{
     color:#8B4513;
     font-size:18px;
     text-align:center;
+}
+/* ===========================
+   RSVP Section
+=========================== */
+
+.rsvp{
+    background:#fff8f0;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.rsvp h2{
+    font-family:'Cinzel',serif;
+    font-size:48px;
+    color:#8B4513;
+    margin-bottom:25px;
+}
+
+.rsvp p{
+    font-family:'Poppins',sans-serif;
+    font-size:22px;
+    color:#555;
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.rsvp-btn{
+    display:inline-block;
+    padding:18px 40px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-family:'Poppins',sans-serif;
+    font-size:20px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.rsvp-btn:hover{
+    background:#1da851;
+    transform:translateY(-5px);
 }
