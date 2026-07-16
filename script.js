@@ -18,7 +18,34 @@ const enterButton = document.getElementById("enter-btn");
 const music = document.getElementById("bgMusic");
 
 enterButton.addEventListener("click", function () {
+    // Fireworks
+const duration = 3000;
+const animationEnd = Date.now() + duration;
 
+const interval = setInterval(() => {
+
+    if (Date.now() > animationEnd) {
+        clearInterval(interval);
+        return;
+    }
+
+    confetti({
+        particleCount: 40,
+        startVelocity: 35,
+        spread: 70,
+        origin: { x: 0.1, y: 0.8 },
+        colors: ["#FFD700", "#FFFFFF", "#FF4D6D"]
+    });
+
+    confetti({
+        particleCount: 40,
+        startVelocity: 35,
+        spread: 70,
+        origin: { x: 0.9, y: 0.8 },
+        colors: ["#FFD700", "#FFFFFF", "#FF4D6D"]
+    });
+
+}, 250);
     const welcome = document.getElementById("welcome-screen");
 
     // Disable the button so it can't be tapped twice
@@ -229,7 +256,7 @@ if (canvas) {
         ctx.globalCompositeOperation = "source-over";
 
         // Gold scratch layer
-        ctx.fillStyle = "#c12a0879";
+        ctx.fillStyle = "#e9b7038b";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         ctx.fillStyle = "#ffffff";
