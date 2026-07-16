@@ -222,7 +222,7 @@ if (canvas) {
         ctx.globalCompositeOperation = "source-over";
 
         // Gold scratch layer
-        ctx.fillStyle = "#d4af37";
+        ctx.fillStyle = "#1b05e661";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         ctx.fillStyle = "#ffffff";
