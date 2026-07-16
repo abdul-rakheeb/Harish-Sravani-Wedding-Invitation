@@ -19,6 +19,8 @@ html{
     background-position:center;
     background-repeat:no-repeat;
     text-align:center;
+    position:relative;
+    overflow:hidden;
     }
 .hero h1{
     font-family:'Great Vibes',cursive;
@@ -206,13 +208,6 @@ nav ul li a.active::after{
 .heart{
     font-size:70px;
     }
-.save-date{
-    background:#f8f3eb;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:100px 20px;
-}
 .date-card{
     width:450px;
     background:white;
@@ -544,10 +539,6 @@ z-index:999;
 #music-btn:hover{
 background:#d4af37;
 }
-.hero-content{
-    margin-top:90px;
-    text-align:center;
-}
 
 @media (max-width:768px){
 .menu-toggle{
@@ -731,10 +722,6 @@ button{
    Floating Hearts
 =========================== */
 
-.hero{
-    position:relative;
-    overflow:hidden;
-}
 
 #heart-container{
     position:absolute;
@@ -746,12 +733,12 @@ button{
     overflow:hidden;
     z-index:2;
 }
-
 .hero-content{
+    margin-top:90px;
+    text-align:center;
     position:relative;
     z-index:3;
 }
-
 .floating-heart{
     position:absolute;
     bottom:-50px;
@@ -849,7 +836,9 @@ button{
     left:0;
     width:100%;
     height:100%;
+    display:block;
     cursor:pointer;
+    z-index:5;
 }
 
 .scratch-text{

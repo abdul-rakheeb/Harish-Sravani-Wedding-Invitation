@@ -232,6 +232,8 @@ if (canvas) {
     }
 
     resizeCanvas();
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
     window.addEventListener("resize", resizeCanvas);
 
     let scratching = false;
