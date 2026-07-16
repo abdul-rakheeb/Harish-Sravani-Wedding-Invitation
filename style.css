@@ -727,14 +727,15 @@ button{
 
 .hero-content{
     position:relative;
-    z-index:2;
+    z-index:3;
 }
 
 .floating-heart{
     position:absolute;
     bottom:-50px;
     color:#ff4d6d;
-    opacity:0.5;
+    opacity:0.7;
+    z-index:2;
     animation:floatHeart linear forwards;
 }
 

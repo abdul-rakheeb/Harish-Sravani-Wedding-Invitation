@@ -188,7 +188,7 @@ function createHeart() {
 
     heart.classList.add("floating-heart");
 
-    heart.innerHTML = "❤";
+    heart.innerHTML = "💖";
 
     heart.style.left = Math.random() * 100 + "%";
 
@@ -203,4 +203,4 @@ function createHeart() {
     }, 10000);
 
 }
-setInterval(createHeart, 1200);
+setInterval(createHeart, 500);
