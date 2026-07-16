@@ -115,3 +115,35 @@ sections.forEach((section)=>{
     section.classList.add("hidden");
     observer.observe(section);
 });
+// ===========================
+// Active Navigation
+// ===========================
+
+const sectionsNav = document.querySelectorAll("section");
+const navItems = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sectionsNav.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+
+        if(window.scrollY >= sectionTop){
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navItems.forEach(link => {
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+            link.classList.add("active");
+        }
+
+    });
+
+});
