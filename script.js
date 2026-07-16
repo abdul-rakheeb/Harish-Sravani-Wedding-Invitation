@@ -204,3 +204,81 @@ function createHeart() {
 
 }
 setInterval(createHeart, 500);
+
+// ===========================
+// Scratch Card
+// ===========================
+
+const canvas = document.getElementById("scratchCanvas");
+
+if (canvas) {
+
+    const ctx = canvas.getContext("2d");
+
+    function resizeCanvas() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+
+        ctx.globalCompositeOperation = "source-over";
+
+        // Gold scratch layer
+        ctx.fillStyle = "#d4af37";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "bold 24px Poppins";
+        ctx.textAlign = "center";
+        ctx.fillText("Scratch Here ✨", canvas.width / 2, canvas.height / 2);
+    }
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    let scratching = false;
+
+    function scratch(x, y) {
+        ctx.globalCompositeOperation = "destination-out";
+        ctx.beginPath();
+        ctx.arc(x, y, 22, 0, Math.PI * 2);
+        ctx.fill();
+    }
+
+    // Desktop
+    canvas.addEventListener("mousedown", () => scratching = true);
+
+    canvas.addEventListener("mouseup", () => scratching = false);
+
+    canvas.addEventListener("mousemove", (e) => {
+        if (!scratching) return;
+
+        const rect = canvas.getBoundingClientRect();
+
+        scratch(
+            e.clientX - rect.left,
+            e.clientY - rect.top
+        );
+    });
+
+    // Mobile
+    canvas.addEventListener("touchstart", () => scratching = true);
+
+    canvas.addEventListener("touchend", () => scratching = false);
+
+    canvas.addEventListener("touchmove", (e) => {
+
+        e.preventDefault();
+
+        if (!scratching) return;
+
+        const rect = canvas.getBoundingClientRect();
+
+        const touch = e.touches[0];
+
+        scratch(
+            touch.clientX - rect.left,
+            touch.clientY - rect.top
+        );
+
+    }, { passive: false });
+
+}
