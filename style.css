@@ -819,7 +819,7 @@ button{
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:linear-gradient(135deg,#1E2022,#C59B27);
+    background:linear-gradient(135deg,#1E2022,#ebeaecef);
 }
 
 .scratch-content h3{
