@@ -181,63 +181,7 @@ window.addEventListener("scroll", () => {
     });
 
 });
-// ===========================
-// Falling Flower Petals
-// ===========================
 
-const flowerContainer = document.getElementById("flower-container");
-
-function createFlower() {
-
-    const flower = document.createElement("div");
-
-    flower.classList.add("flower");
-
-    flower.innerHTML = "🌸";
-
-    flower.style.left = Math.random() * 100 + "vw";
-
-    flower.style.fontSize = (18 + Math.random() * 18) + "px";
-
-    flower.style.animationDuration = (6 + Math.random() * 5) + "s";
-
-    flowerContainer.appendChild(flower);
-
-    setTimeout(() => {
-        flower.remove();
-    }, 11000);
-
-}
-
-setInterval(createFlower, 800);
-// ===========================
-// Floating Hearts
-// ===========================
-
-const heartContainer = document.getElementById("heart-container");
-
-function createHeart() {
-
-    const heart = document.createElement("div");
-
-    heart.classList.add("floating-heart");
-
-    heart.innerHTML = "💖";
-
-    heart.style.left = Math.random() * 100 + "%";
-
-    heart.style.fontSize = (15 + Math.random() * 20) + "px";
-
-    heart.style.animationDuration = (6 + Math.random() * 4) + "s";
-
-    heartContainer.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 10000);
-
-}
-setInterval(createHeart, 500);
 
 // ===========================
 // Scratch Card
